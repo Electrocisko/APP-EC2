@@ -8,13 +8,18 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const PORT = dotenvConfig.app.PORT;
 const app = express();
 
-
+//midlewars
 app.use(express.json());
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({extended: true}));
+app.use(express.static(__dirname+'/public'));
+
+// Template config engine
+app.set('views',__dirname+'/views');
+app.set('view engine', 'ejs');
 
 
 app.get("/", (req,res) => {
-    res.send("<h1>Servidor APP</h1>")
+   res.render("home")
 })
 
 
