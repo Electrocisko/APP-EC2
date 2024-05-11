@@ -5,7 +5,7 @@ import dotenvConfig from "./config/dotenvConfig.js";
 
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const PORT = dotenvConfig.app.PORT || 3000;
+const PORT = dotenvConfig.app.PORT || 80;
 const app = express();
 
 //midlewars
