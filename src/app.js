@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 
 
 app.get("/", (req,res) => {
-   res.render("home")
+  res.send("<h1>Hola Node JS</h1>")
 })
 
 
